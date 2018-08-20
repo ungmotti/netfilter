@@ -103,30 +103,10 @@ static u_int32_t print_pkt (struct nfq_data *tb)
             }
             
             }
-            /*
-            */
             
             free(host);
             free(payload);
     }
-            
-/*
-            for (int i = 0; i < 2; i++) {
-                printf("%02x ", tcph->th_sport);
-                printf("%02x ", tcph->th_dport);
-            }
-*/
-            //char url[12];
-            //strcpy(url, "www.sex.com");
-            //char host[40];
-            //memcpy(host, payload, sizeof(host));
-
-            //www.sex.com
-            //if(memcmp(payload+21, url))   
-//            if(strstr(host,"sex.com") != NULL){
-
-//            } 
-        
 
     fputc('\n', stdout);
 
