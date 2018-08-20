@@ -10,6 +10,9 @@
 #include <netinet/tcp.h>
 #include <libnetfilter_queue/libnetfilter_queue.h>
 #pragma pack(1)
+//[bob7][포렌식]netfilter_test[김영웅]
+
+
 void dump(unsigned char* buf, int size) {
     int i;
     for (i = 0; i < size; i++) {
@@ -97,13 +100,14 @@ static u_int32_t print_pkt (struct nfq_data *tb)
             for (int i = 0; i < 3; i++) {
                 printf("%02x ", host[i]);
             }
+            
             if(memcmp(host, "\x47\x45\x54",3)==0){
+                
                 if(strstr(host,"sex.com") != NULL){
                     flag = 1;
-            }
+                }
             
             }
-            
             free(host);
             free(payload);
     }
